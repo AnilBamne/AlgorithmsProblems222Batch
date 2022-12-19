@@ -173,5 +173,37 @@ namespace AlgorithmAndDSPrograms
             }
             Console.WriteLine("\ntotal prime numbers are="+total);
         }
+
+        /// <summary>
+        /// Anagram: checking wheather two strings are anagram or not
+        /// </summary>
+        public static void Anagram()
+        {
+            Console.WriteLine("---Welcome To Anagram Program---\n");
+
+            string word1 = "Raman";
+            string word2 = "Namar";
+
+            Console.WriteLine(word1);
+            Console.WriteLine(word2);
+
+            char[] ch1 = word1.ToLower().ToCharArray();
+            char[] ch2 = word2.ToLower().ToCharArray();
+
+            Array.Sort(ch1);
+            Array.Sort(ch2);
+
+            string val1 = new string(ch1);
+            string val2 = new string(ch2);
+
+            if (val1.Equals(val2))
+            {
+                Console.WriteLine("Are Anagram.");
+            }
+            else
+            {
+                Console.WriteLine("Not Anagram.");
+            }
+        }
     }
 }
