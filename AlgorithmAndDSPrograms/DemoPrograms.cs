@@ -51,6 +51,13 @@ namespace AlgorithmAndDSPrograms
             }
         }
 
+
+        /// <summary>
+        /// Permute method is used for computing permutation of string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="l"></param>
+        /// <param name="r"></param>
         public static void Permute(string str, int l, int r)
         {
             if (l == r)
@@ -65,6 +72,13 @@ namespace AlgorithmAndDSPrograms
                 }
             }
         }
+        /// <summary>
+        /// swapping the
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="i"></param>
+        /// <param name="j"></param>
+        /// <returns></returns>
         public static string Swap(string a, int i, int j)
         {
             char temp;
@@ -74,6 +88,28 @@ namespace AlgorithmAndDSPrograms
             charArray[j] = temp;
             string s = new string(charArray);
             return s;
+        }
+
+        public static void InsertionSort(int[] array)
+        {
+            int j, temp;
+            int n=array.Length;
+            for(int i=0; i < n; i++)
+            {
+                temp = array[i];
+                j = i - 1;
+                while(j>=0 && temp <= array[j])
+                {
+                    array[j+1] = array[j];
+                    j = j - 1;
+                }
+                array[j + 1] = temp;
+            }
+            //printing array after sorting
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]+" ");
+            }
         }
     }
 }
