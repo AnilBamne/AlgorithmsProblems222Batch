@@ -90,6 +90,10 @@ namespace AlgorithmAndDSPrograms
             return s;
         }
 
+        /// <summary>
+        /// Insertion sort
+        /// </summary>
+        /// <param name="array"></param>
         public static void InsertionSort(int[] array)
         {
             int j, temp;
@@ -109,6 +113,37 @@ namespace AlgorithmAndDSPrograms
             for(int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i]+" ");
+            }
+        }
+
+        /// <summary>
+        /// Bubble sort
+        /// </summary>
+        public static void BubbleSort(int[] array)
+        {
+            Console.WriteLine("\nArray before sorting: ");
+            int n = array.Length;
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (array[j] > array[j + 1])        //swapping
+                    {
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("\n\nArray after sorting: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(array[i] + " ");
             }
         }
     }

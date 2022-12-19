@@ -8,7 +8,7 @@ namespace AlgorithmAndDSPrograms
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to data structure and algorithm practice programs");
-            Console.WriteLine("Choose option\n1 Binary search for word\n2 Permutations of word\n3 Insertion sort");
+            Console.WriteLine("Choose option\n1 Binary search for word\n2 Permutations of word\n3 Insertion sort\n4 Bubblie sort");
             int option=int.Parse(Console.ReadLine());
             switch (option)
             {
@@ -24,6 +24,10 @@ namespace AlgorithmAndDSPrograms
                 case 3:
                     int[] array = { 12, 34, 20, 4, 50 };
                     DemoPrograms.InsertionSort(array);
+                    break;
+                case 4:
+                    int[] array1 = { 12, 3, 10, 40, 5 };
+                    DemoPrograms.BubbleSort(array1);
                     break;
             }
             
