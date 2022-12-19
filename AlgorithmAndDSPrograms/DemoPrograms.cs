@@ -146,5 +146,32 @@ namespace AlgorithmAndDSPrograms
                 Console.Write(array[i] + " ");
             }
         }
+
+        /// <summary>
+        /// Prime numbers between 1-1000
+        /// </summary>
+        public static void PrimeNumbers()
+        {
+            Console.WriteLine("Prime numbers between 1-1000 are :");
+            int range = 1000;
+            int total = 0;
+            for(int i = 1; i <= range; i++)
+            {
+                int count = 0;
+                for (int j = i; j >= 1; j--)
+                {
+                    if (i % j == 0)
+                    {
+                        count++;
+                    }
+                }
+                if (count == 2)
+                {
+                    Console.Write(i+" ");
+                    total++;
+                }
+            }
+            Console.WriteLine("\ntotal prime numbers are="+total);
+        }
     }
 }
